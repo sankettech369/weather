@@ -1,0 +1,156 @@
+:root {
+  --ink: #1B1F3B;
+  --gold: #E8A33D;
+  --mist: #F2F1ED;
+  --slate: #4A5568;
+  --sky: #6FA8DC;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(160deg, var(--ink) 0%, #2E3563 55%, var(--sky) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--mist);
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(242,241,237,0.25);
+  background: rgba(255,255,255,0.08);
+  color: var(--mist);
+  font-size: 15px;
+  outline: none;
+}
+
+.search input::placeholder { color: rgba(242,241,237,0.5); }
+.search input:focus { border-color: var(--gold); }
+
+.search button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.search button:hover { opacity: 0.9; }
+
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.city {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.date {
+  font-size: 13px;
+  color: rgba(242,241,237,0.6);
+  margin-top: 4px;
+}
+
+.temp-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 6px;
+}
+
+.temp {
+  font-size: 76px;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.icon { font-size: 56px; }
+
+.condition {
+  font-size: 16px;
+  color: var(--gold);
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 20px;
+}
+
+.detail-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(242,241,237,0.55);
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.unit-toggle button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--mist);
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.unit-toggle button.active {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+.message {
+  text-align: center;
+  color: rgba(242,241,237,0.7);
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.message.error { color: #E8846F; }
